@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/news_nav_graph"
+    app:startDestination="@id/imageListFragment">
+
+    <fragment
+        android:id="@+id/imageListFragment"
+        android:name="com.findmore.imagesearch.ui.ImageListFragment"
+        android:label="image_list_fragment"
+        tools:layout="@layout/image_list_fragment" >
+        <action
+            android:id="@+id/action_imageListFragment_to_imageDetailsFragment"
+            app:destination="@id/imageDetailsFragment" />
+        <action
+            android:id="@+id/action_imageListFragment_to_savedImagesFragment"
+            app:destination="@id/savedImagesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageDetailsFragment"
+        android:name="com.findmore.imagesearch.ui.ImageDetailsFragment"
+        android:label="fragment_image_details"
+        tools:layout="@layout/fragment_image_details" >
+    </fragment>
+    <fragment
+        android:id="@+id/savedImagesFragment"
+        android:name="com.findmore.imagesearch.ui.SavedImagesFragment"
+        android:label="saved_images_fragment"
+        tools:layout="@layout/saved_images_fragment" >
+        <action
+            android:id="@+id/action_savedImagesFragment_to_imageDetailsFragment"
+            app:destination="@id/imageDetailsFragment" />
+    </fragment>
+
+</navigation>
